@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 9090;
 
 const serverUrl =
     environment === "PRODUCTION"
-        ? `http://${vpsIp}/api`
+        ? `${vpsIp}:${PORT}/api`
         : `http://localhost:${PORT}/api`;
 
 const swaggerOptions = {

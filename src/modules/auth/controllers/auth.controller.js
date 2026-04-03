@@ -75,7 +75,7 @@ class AuthController
             res.cookie("accessToken", accessToken, {
                 httpOnly: true,
                 sameSite: "lax",
-                secure: true,
+                secure: false,
                 path: "/",
                 maxAge: 3 * 60 * 60 * 1000,
             });
@@ -83,7 +83,7 @@ class AuthController
             res.cookie("refreshToken", refreshToken, {
                 httpOnly: true,
                 sameSite: "lax",
-                secure: true,
+                secure: false,
                 path: "/",
                 maxAge: 7 * 24 * 60 * 60 * 1000,
             });
@@ -91,7 +91,7 @@ class AuthController
             res.cookie("userRole", role, {
                 httpOnly: true,
                 sameSite: "lax",
-                secure: true,
+                secure: false,
                 path: "/",
                 maxAge: 7 * 24 * 60 * 60 * 1000,
             });

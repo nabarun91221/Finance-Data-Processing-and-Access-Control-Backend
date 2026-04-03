@@ -41,9 +41,11 @@ const vpsIp = process.env.VPS_IP
 //config
 App.use(express.urlencoded());
 App.use(express.json());
+
+
 App.use(
     cors({
-        origin: clientUrl,
+        origin: true,
         methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
         credentials: true,
     })
@@ -64,7 +66,15 @@ App.use(BaseUrl, verifyRequestJwt, FinancialRecordRouter);
 App.use(BaseUrl, verifyRequestJwt, AuditLogRouter);
 
 //swagger
-App.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+App.use(
+    "/api-docs",
+    swaggerUi.serve,
+    swaggerUi.setup(swaggerSpec, {
+        swaggerOptions: {
+            withCredentials: true
+        }
+    })
+);
 
 //create audit log of interactions with the system
 App.use(auditLogger)
