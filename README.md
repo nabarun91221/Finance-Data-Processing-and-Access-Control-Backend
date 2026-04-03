@@ -107,7 +107,7 @@ Example development configuration:
 ```
 Backend: Node.js (Express)
 Database: MongoDB
-Cache / Rate Limiting: Redis
+Cache : Redis
 Authentication: JWT + HTTP-only cookies
 ```
 ---
