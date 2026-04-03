@@ -81,6 +81,12 @@ App.listen(PORT, async (err) =>
 {
     if (!err) {
         await connectMongoDb();
-        if (environment != "PRODUCTION") console.log(`Server running at http://localhost:${PORT}`);
+        if (environment != "PRODUCTION") {
+            console.log(`Server running at http://localhost:${PORT}`);
+            console.log(`Find swagger api documentation at http://localhost:${PORT}/api-docs`)
+        }
+        else {
+            console.log(`Server running at ${PORT}`);
+        }
     }
 })
