@@ -113,6 +113,17 @@ Database: MongoDB
 Cache : Redis
 Authentication: JWT + HTTP-only cookies
 ```
+## Deployed API Server
+
+The live API documentation is available at:
+
+**http://140.245.205.82:9090/api-docs**
+
+You can use the following credentials to authenticate and test the endpoints directly from the deployed Swagger UI.
+
+> **Note:** These credentials are configured only for the deployed project and may not work in local environments.
+
+---
 
 ## Credentials
 
@@ -132,6 +143,8 @@ The following test accounts are available for trying the system. These accounts 
 
 * **Email:** [nabarunmiddya@gmail.com](mailto:nabarunmiddya@gmail.com)
 * **Password:** GBuONQ
+
+These accounts can be used to log in and explore the different permission levels and features of the Finance Data Processing and Access Control System.
 
 These accounts can be used to log in and explore the different permission levels and features of the Finance Data Processing and Access Control System.
 
