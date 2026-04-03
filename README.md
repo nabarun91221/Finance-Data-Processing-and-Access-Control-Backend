@@ -1,4 +1,186 @@
 # Architecture and Runtime Platform - Application bootstrap, request pipeline, and router composition
+## Running the Application Locally
+
+Follow the steps below to configure and run the backend application on your local machine.
+
+---
+
+## 1. Clone the Repository
+
+```bash
+git clone <your-repository-url>
+cd <project-folder>
+```
+
+---
+
+## 2. Install Dependencies
+
+Make sure you have **Node.js (v18 or later)** installed.
+
+```bash
+npm install
+```
+
+---
+
+## 3. Create Environment Variables
+
+Create a `.env` file in the **root directory** of the project.
+
+Example:
+
+```env
+PORT=8080
+
+# Database
+MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/database_name
+
+# JWT Secrets
+JWT_ACCESS_SECRET=example_access_secret
+JWT_REFRESH_SECRET=example_refresh_secret
+JWT_RESET_PASSWORD_SECRET=example_reset_secret
+JWT_EMAIL_CONFIRMATION_SECRET=example_email_confirmation_secret
+
+# Email Configuration
+DOMAIN_EMAIL=example@gmail.com
+DOMAIN_EMAIL_APP_PASS=example_app_password
+
+# Redis (Cloud)
+REDIS_CLOUD_URI=redis://default:password@redis-host:port
+REDIS_CLOUD_PASSWORD=example_password
+
+# Redis (Local Docker)
+REDIS_PASSWORD_DOCKER=example_password
+REDIS_DOCKER_URI=redis://localhost:6379
+
+# Environment
+ENVIRONMENT=DEVELOPMENT
+
+# Cache Configuration
+CACHE_TTL_MS=300000
+
+# Rate Limiting
+RATE_LIMIT_WINDOW_MS=60000
+RATE_LIMIT_MAX_REQUESTS=100
+
+# Client URL
+CLIENT_BASE_URL=http://localhost:3000
+```
+
+⚠️ **Important:**
+These values are examples only. Replace them with your own credentials and configuration.
+
+---
+
+## 4. Start Required Services
+
+### MongoDB
+
+Make sure MongoDB is running locally or use a cloud provider such as MongoDB Atlas.
+
+### Redis (optional)
+
+If using **Docker**, run:
+
+```bash
+docker run -d -p 6379:6379 redis
+```
+
+Or configure a cloud Redis instance and update the `.env` accordingly.
+
+---
+
+## 5. Start the Server
+
+Run the application using:
+
+```bash
+npm run dev
+```
+
+or
+
+```bash
+npm start
+```
+
+If everything is configured correctly, the server should start on:
+
+```
+http://localhost:8080
+```
+
+---
+
+## 6. Testing the API
+
+You can test the API using tools like:
+
+* Postman
+* Insomnia
+* Thunder Client (VS Code extension)
+
+Example test request:
+
+**GET**
+
+```
+http://localhost:8080/api/health
+```
+
+Expected response:
+
+```json
+{
+  "status": "ok",
+  "message": "Server is running"
+}
+```
+
+---
+
+## 7. Authentication Testing
+
+Typical authentication flow:
+
+1. Register a new user
+2. Confirm email (if enabled)
+3. Login to receive authentication cookies / tokens
+4. Use authenticated routes
+
+---
+
+## 8. Troubleshooting
+
+If the application does not start:
+
+* Ensure `.env` variables are configured correctly
+* Verify MongoDB connection
+* Verify Redis connection (if enabled)
+* Ensure the required port is not already in use
+
+---
+
+## 9. Development Environment
+
+Example development configuration:
+
+```
+Backend: Node.js (Express)
+Database: MongoDB
+Cache / Rate Limiting: Redis
+Authentication: JWT + HTTP-only cookies
+```
+
+---
+
+## 10. Security Note
+
+Never commit the `.env` file to the repository.
+
+Use `.env.example` for sharing configuration structure.
+
 
 ## Overview
 
