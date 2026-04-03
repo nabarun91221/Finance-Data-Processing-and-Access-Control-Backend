@@ -114,21 +114,27 @@ Cache : Redis
 Authentication: JWT + HTTP-only cookies
 ```
 
-Credentials
+## Credentials
 
 The following test accounts are available for trying the system. These accounts represent different user roles within the application.
 
-Admin
-Email: nabarunmiddya91221@gmail.com
-Password: amikkr
-Analyst
-Email: nabarunmiddya9821@gmail.com
-Password: GBuONQ
-User
-Email: nabarunmiddya@gmail.com
-Password: GBuONQ
+### Admin
+
+* **Email:** [nabarunmiddya91221@gmail.com](mailto:nabarunmiddya91221@gmail.com)
+* **Password:** amikkr
+
+### Analyst
+
+* **Email:** [nabarunmiddya9821@gmail.com](mailto:nabarunmiddya9821@gmail.com)
+* **Password:** GBuONQ
+
+### User
+
+* **Email:** [nabarunmiddya@gmail.com](mailto:nabarunmiddya@gmail.com)
+* **Password:** GBuONQ
 
 These accounts can be used to log in and explore the different permission levels and features of the Finance Data Processing and Access Control System.
+
 ---
 ## Overview
 
