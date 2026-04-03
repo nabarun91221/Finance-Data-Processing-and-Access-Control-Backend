@@ -49,8 +49,8 @@ DOMAIN_EMAIL_APP_PASS=example_app_password
 # Redis (Cloud)
 REDIS_CLOUD_URI=redis://default:password@redis-host:port
 REDIS_CLOUD_PASSWORD=example_password
-
-# Redis (Local Docker)
+#OR
+# Redis (Local Docker )
 REDIS_PASSWORD_DOCKER=example_password
 REDIS_DOCKER_URI=redis://localhost:6379
 
