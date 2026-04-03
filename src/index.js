@@ -36,6 +36,7 @@ const rateLimitMaxReq = Number(process.env.RATE_LIMIT_MAX_REQUESTS)
 const ratelimiter = rateLimiterFn(rateLimitWindowMs, rateLimitMaxReq);
 const cacheTtl = Number(process.env.CACHE_TTL_MS)
 const clientUrl = process.env.CLIENT_BASE_URL
+const vpsIp = process.env.VPS_IP
 
 //config
 App.use(express.urlencoded());
@@ -86,7 +87,8 @@ App.listen(PORT, async (err) =>
             console.log(`Find swagger api documentation at http://localhost:${PORT}/api-docs`)
         }
         else {
-            console.log(`Server running at ${PORT}`);
+            console.log(`Server running at ${vpsIp}:${PORT}`);
+            console.log(`Find swagger api documentation at {vpsIp}:${PORT}/api-docs`)
         }
     }
 })
