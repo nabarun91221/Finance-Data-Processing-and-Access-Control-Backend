@@ -88,7 +88,7 @@ App.listen(PORT, async (err) =>
         }
         else {
             console.log(`Server running at ${vpsIp}:${PORT}`);
-            console.log(`Find swagger api documentation at {vpsIp}:${PORT}/api-docs`)
+            console.log(`Find swagger api documentation at ${vpsIp}:${PORT}/api-docs`)
         }
     }
 })
