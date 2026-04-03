@@ -1,4 +1,7 @@
 # Architecture and Runtime Platform - Application bootstrap, request pipeline, and router composition
+
+
+
 ## Running the Application Locally
 
 Follow the steps below to configure and run the backend application on your local machine.
@@ -110,6 +113,22 @@ Database: MongoDB
 Cache : Redis
 Authentication: JWT + HTTP-only cookies
 ```
+
+Credentials
+
+The following test accounts are available for trying the system. These accounts represent different user roles within the application.
+
+Admin
+Email: nabarunmiddya91221@gmail.com
+Password: amikkr
+Analyst
+Email: nabarunmiddya9821@gmail.com
+Password: GBuONQ
+User
+Email: nabarunmiddya@gmail.com
+Password: GBuONQ
+
+These accounts can be used to log in and explore the different permission levels and features of the Finance Data Processing and Access Control System.
 ---
 ## Overview
 
