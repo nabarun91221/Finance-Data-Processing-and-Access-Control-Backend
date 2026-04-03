@@ -86,102 +86,31 @@ If using **Docker**, run:
 ```bash
 docker run -d -p 6379:6379 redis
 ```
-
 Or configure a cloud Redis instance and update the `.env` accordingly.
-
 ---
-
 ## 5. Start the Server
-
 Run the application using:
-
 ```bash
 npm run dev
 ```
-
 or
-
 ```bash
 npm start
 ```
-
 If everything is configured correctly, the server should start on:
 
 ```
 http://localhost:8080
 ```
-
----
-
-## 6. Testing the API
-
-You can test the API using tools like:
-
-* Postman
-* Insomnia
-* Thunder Client (VS Code extension)
-
-Example test request:
-
-**GET**
-
-```
-http://localhost:8080/api/health
-```
-
-Expected response:
-
-```json
-{
-  "status": "ok",
-  "message": "Server is running"
-}
-```
-
----
-
-## 7. Authentication Testing
-
-Typical authentication flow:
-
-1. Register a new user
-2. Confirm email (if enabled)
-3. Login to receive authentication cookies / tokens
-4. Use authenticated routes
-
----
-
-## 8. Troubleshooting
-
-If the application does not start:
-
-* Ensure `.env` variables are configured correctly
-* Verify MongoDB connection
-* Verify Redis connection (if enabled)
-* Ensure the required port is not already in use
-
----
-
-## 9. Development Environment
-
+## 6. Development Environment
 Example development configuration:
-
 ```
 Backend: Node.js (Express)
 Database: MongoDB
 Cache / Rate Limiting: Redis
 Authentication: JWT + HTTP-only cookies
 ```
-
 ---
-
-## 10. Security Note
-
-Never commit the `.env` file to the repository.
-
-Use `.env.example` for sharing configuration structure.
-
-
 ## Overview
 
 This runtime layer builds the Express application, wires core middleware, and mounts the feature routers under the `/api` prefix. It also exposes Swagger UI at `/api-docs`, then runs the post-route middleware chain that persists audit logs, stores GET responses in Redis, normalizes controller output, and converts errors into JSON responses.
