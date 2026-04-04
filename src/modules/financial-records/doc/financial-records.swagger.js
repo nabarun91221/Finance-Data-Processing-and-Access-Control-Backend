@@ -91,7 +91,7 @@
  *         schema:
  *           type: string
  *           format: date
- *         example: 2025-04-01
+ *         example: 2026-04-01
  *         description: Filter records starting from this date
  *
  *       - in: query
@@ -99,14 +99,14 @@
  *         schema:
  *           type: string
  *           format: date
- *         example: 2025-05-01
+ *         example: 2026-05-01
  *         description: Filter records until this date
  *
  *       - in: query
  *         name: category
  *         schema:
  *           type: string
- *         example: 64a7b8c9f0a12b3c4d5e6789
+ *         example: 69ce386b985b9665facf6328
  *         description: Filter by category ID
  *
  *       - in: query
