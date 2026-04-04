@@ -31,28 +31,6 @@
  *         example: 10
  *         description: Number of records per page
  *
- *       - in: query
- *         name: entity
- *         schema:
- *           type: string
- *         example: FinancialRecord
- *         description: Filter logs by entity type
- *
- *       - in: query
- *         name: action
- *         schema:
- *           type: string
- *           enum: [CREATE, UPDATE, DELETE]
- *         example: UPDATE
- *         description: Filter logs by action type
- *
- *       - in: query
- *         name: user
- *         schema:
- *           type: string
- *         example: 64a7b8c9f0a12b3c4d5e6789
- *         description: Filter logs by user ID
- *
  *     responses:
  *       200:
  *         description: Audit logs fetched successfully
