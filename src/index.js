@@ -2,10 +2,10 @@ import "dotenv/config";
 
 import express from "express";
 import connectMongoDb from "./configs/mongoDb.config.js";
-import "./configs/redis.config.js"
+import "./configs/redis.config.js";
 
-import cors from "cors"
-import cookieParser from "cookie-parser"
+import cors from "cors";
+import cookieParser from "cookie-parser";
 import swaggerUi from "swagger-ui-express";
 import swaggerSpec from "./configs/swagger.config.js";
 
@@ -31,10 +31,10 @@ const BaseUrl = "/api"
 
 const PORT = process.env.PORT;
 const environment = process.env.ENVIRONMENT;
-const rateLimitWindowMs = Number(process.env.RATE_LIMIT_WINDOW_MS)
-const rateLimitMaxReq = Number(process.env.RATE_LIMIT_MAX_REQUESTS)
+const rateLimitWindowMs = Number(process.env.RATE_LIMIT_WINDOW_MS);
+const rateLimitMaxReq = Number(process.env.RATE_LIMIT_MAX_REQUESTS);
 const ratelimiter = rateLimiterFn(rateLimitWindowMs, rateLimitMaxReq);
-const cacheTtl = Number(process.env.CACHE_TTL_MS)
+const cacheTtl = Number(process.env.CACHE_TTL_MS);
 const clientUrl = process.env.CLIENT_BASE_URL
 const vpsIp = process.env.VPS_IP
 
@@ -94,11 +94,11 @@ App.listen(PORT, async (err) =>
         await connectMongoDb();
         if (environment != "PRODUCTION") {
             console.log(`Server running at http://localhost:${PORT}`);
-            console.log(`Find swagger api documentation at http://localhost:${PORT}/api-docs`)
+            console.log(`Find swagger api documentation at http://localhost:${PORT}/api-docs`);
         }
         else {
             console.log(`Server running at ${vpsIp}:${PORT}`);
-            console.log(`Find swagger api documentation at ${vpsIp}:${PORT}/api-docs`)
+            console.log(`Find swagger api documentation at ${vpsIp}:${PORT}/api-docs`);
         }
     }
 })
