@@ -10,11 +10,11 @@ import swaggerUi from "swagger-ui-express";
 import swaggerSpec from "./configs/swagger.config.js";
 
 
-import verifyRequestJwt from "./shared/middleware/auth.middleware.js"
-import globalErrorHandler from "./shared/middleware/response-handler/error.middleware.js"
-import globalResponseHandler from "./shared/middleware/response-handler/response.middleware.js"
-import cacheCreate from "./shared/middleware/cache-manager/cacheCreate.middleware.js"
-import auditLogger from "./modules/audit-logs/auditLogger.middleware.js"
+import verifyRequestJwt from "./shared/middleware/auth.middleware.js";
+import globalErrorHandler from "./shared/middleware/response-handler/error.middleware.js";
+import globalResponseHandler from "./shared/middleware/response-handler/response.middleware.js";
+import cacheCreate from "./shared/middleware/cache-manager/cacheCreate.middleware.js";
+import auditLogger from "./modules/audit-logs/auditLogger.middleware.js";
 
 
 import AuthRouter from './modules/auth/routes/auth.route.js';
