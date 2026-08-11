@@ -35,8 +35,8 @@ const rateLimitWindowMs = Number(process.env.RATE_LIMIT_WINDOW_MS);
 const rateLimitMaxReq = Number(process.env.RATE_LIMIT_MAX_REQUESTS);
 const ratelimiter = rateLimiterFn(rateLimitWindowMs, rateLimitMaxReq);
 const cacheTtl = Number(process.env.CACHE_TTL_MS);
-const clientUrl = process.env.CLIENT_BASE_URL
-const vpsIp = process.env.VPS_IP
+const clientUrl = process.env.CLIENT_BASE_URL;
+const vpsIp = process.env.VPS_IP;
 
 //config
 App.use(express.urlencoded());
