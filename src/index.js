@@ -1,4 +1,4 @@
-import "dotenv/config"
+import "dotenv/config";
 
 import express from "express";
 import connectMongoDb from "./configs/mongoDb.config.js";
@@ -38,7 +38,6 @@ const cacheTtl = Number(process.env.CACHE_TTL_MS);
 const clientUrl = process.env.CLIENT_BASE_URL;
 const vpsIp = process.env.VPS_IP;
 
-//config
 App.use(express.urlencoded());
 App.use(express.json());
 
