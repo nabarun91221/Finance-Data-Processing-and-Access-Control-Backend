@@ -54,7 +54,7 @@ App.use(cookieParser());
 
 
 //rate limiter
-App.use(BaseUrl, ratelimiter)
+App.use(BaseUrl, ratelimiter);
 
 //routes
 App.use(BaseUrl, AuthRouter);
@@ -71,20 +71,20 @@ App.use(
     swaggerUi.serve,
     swaggerUi.setup(swaggerSpec, {
         swaggerOptions: {
-            withCredentials: true
+            withCredentials: true,
         }
     })
 );
 
 //create audit log of interactions with the system
-App.use(auditLogger)
+App.use(auditLogger);
 
 //cache (60*10 sec = 10min)
 App.use(cacheCreate(cacheTtl));
 
 //global response and error handling
-App.use(globalResponseHandler)
-App.use(globalErrorHandler)
+App.use(globalResponseHandler);
+App.use(globalErrorHandler);
 
 
 
