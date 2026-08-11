@@ -1,7 +1,7 @@
 import "dotenv/config";
 
 import express from "express";
-import connectMongoDb from "./configs/mongoDb.config.js";
+import connectMongoDb from "./configs/mongoDb.config.js"
 import "./configs/redis.config.js";
 
 import cors from "cors";
